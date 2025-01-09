@@ -1,0 +1,8 @@
+# command = /run/current-system/sw/bin/nu
+# window-padding-color = background 
+# improves tmux display i think
+font-feature = -liga
+font-feature = -calt
+font-feature = -dlig	
+font-size = 18
+theme = Tomorrow Night Burns
