@@ -10,14 +10,22 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/sebastianstegmann/Library/Application Su
 
 # Herd injected PHP binary.
 export PATH="/Users/sebastianstegmann/Library/Application Support/Herd/bin/":$PATH
-
 accept-line() {
     if [[ -z $BUFFER ]]; then
-        nvim
+        BUFFER="yazi ."
+        zle .accept-line
     else
         zle .accept-line
     fi
 }
+zle -N accept-line
+# accept-line() {
+#     if [[ -z $BUFFER ]]; then
+#         yazi .
+#     else
+#         zle .accept-line
+#     fi
+# }
 
 # Bind the Enter key to our new function
 zle -N accept-line
@@ -33,6 +41,7 @@ alias e='[ -z \$BUFFER ] && nvim || clear'
 alias .='pwd'
 alias acp='function _acp() { git add . && git commit -m "$1" && git push }; _acp'
 
+alias ac='function _ac() { git add . && git commit -m "$1" }; _ac'
 # eval "$(zellij setup --generate-auto-start zsh)"
 # tmux
 # if [ -z "$TMUX" ]; then
@@ -59,3 +68,12 @@ export PATH=$PATH:/Users/sebastianstegmann/roc_nightly-macos_apple_silicon-2024-
 
 # haskell stuff
 source ~/.ghcup/env
+
+alias merge-to-production='git checkout production && git merge main && git push origin production && git checkout main'
+export HELIX_RUNTIME=~/src/helix/runtime
+
+eval $(thefuck --alias)
+
+eval "$(zoxide init zsh)"
+
+export EDITOR=hx

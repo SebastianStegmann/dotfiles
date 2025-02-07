@@ -5,4 +5,9 @@ font-feature = -liga
 font-feature = -calt
 font-feature = -dlig	
 font-size = 18
-theme = Tomorrow Night Burns
+theme = Everforest Dark - Hard
+#window-decoration=false
+
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+macos-option-as-alt = false

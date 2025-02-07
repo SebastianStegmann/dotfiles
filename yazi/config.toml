@@ -1,0 +1,4 @@
+theme = "everforest_dark"
+
+[editor.file-picker]
+hidden = true
