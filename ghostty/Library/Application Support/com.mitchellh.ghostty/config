@@ -8,6 +8,6 @@ font-size = 18
 theme = Everforest Dark - Hard
 #window-decoration=false
 
-keybind = alt+left=unbind
-keybind = alt+right=unbind
+# keybind = alt+left=unbind
+# keybind = alt+right=unbind
 macos-option-as-alt = false
