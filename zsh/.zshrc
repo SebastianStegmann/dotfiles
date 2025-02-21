@@ -40,3 +40,10 @@ export HERD_PHP_84_INI_SCAN_DIR="/Users/ss/Library/Application Support/Herd/conf
 export PATH="/Users/ss/Library/Application Support/Herd/bin/":$PATH
 
 [ -f "/Users/ss/.ghcup/env" ] && . "/Users/ss/.ghcup/env" # ghcup-env
+
+
+# Herd injected NVM configuration
+export NVM_DIR="/Users/ss/Library/Application Support/Herd/config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"

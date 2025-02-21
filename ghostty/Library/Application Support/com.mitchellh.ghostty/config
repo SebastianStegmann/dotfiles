@@ -11,3 +11,11 @@ theme = Everforest Dark - Hard
 # keybind = alt+left=unbind
 # keybind = alt+right=unbind
 macos-option-as-alt = false
+
+keybind = alt+tab=goto_split:right
+keybind = alt+$=goto_split:left
+
+keybind = alt+l=goto_split:right
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
