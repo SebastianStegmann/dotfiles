@@ -11,9 +11,11 @@ brew bundle
 
 3. Using stow
 
-``` stow */ ```
+```
+stow */ 
+```
 
 Either stow each folder with `stow nvim` etc
-or use the wildcard */ to place everything
+or use the wildcard `*/` to place everything
 `stow . ` misplaces the folders
 
