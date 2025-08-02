@@ -6,6 +6,7 @@ font-feature = -calt
 font-feature = -dlig	
 font-size = 18
 theme = Everforest Dark - Hard
+# font-family = Kelmscott Mono
 #window-decoration=false
 
 # keybind = alt+left=unbind

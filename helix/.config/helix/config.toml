@@ -3,3 +3,6 @@ theme = "everforest_dark"
 [editor]
 line-number = "relative"
 true-color = true
+
+[editor.soft-wrap]
+enable = true
