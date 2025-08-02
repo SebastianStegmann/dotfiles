@@ -1,0 +1,15 @@
+brew 'git'
+brew 'stow'
+brew 'cowsay'
+brew 'zoxide'
+brew 'bat'
+brew 'eza'
+
+
+cask 'hyperkey'
+cask 'ghostty'
+# cask 'brave-browser'
+
+# Lua_ls
+
+

@@ -1,17 +1,3 @@
-# Dotfiles
-
-I move dotfiles from original position
-> mv .config/nvim .dotfiles/nvim
-
-Then (soft)link back to it
-> ln -s ~/.dotfiles/nvim ~/.config/nvim
-
-
-Ghostty location
-~/Library/Application Support/com.mitchellh.ghostty/
-
-ln -s ~/.dotfiles/ghostty/config config
-
 # Fresh install
 1. Install Homebrew
 '''
@@ -23,26 +9,11 @@ ln -s ~/.dotfiles/ghostty/config config
 brew bundle
 '''
 
-3. Make a Brewfile, it should include
-'''
-brew 'git'
-brew 'stow'
-brew 'helix'
-brew 'yazi'
-brew 'cowsay'
-brew 'zoxide'
-brew 'ncspot'
-brew 'bat'
-brew 'eza'
+3. Using stow
 
+''' stow */ '''
 
-cask 'hyperkey'
-cask 'ghostty'
-cask 'brave-browser'
-cask 'betterdisplay'
-cask 'herd'
+Either stow each folder with ''' stow nvim ''' etc
+or use the wildcard */ to place everything
+''' stow . ''' misplaces the folders
 
-
-'''
-
-4. Use GNU Stow for placing dotfiles 
