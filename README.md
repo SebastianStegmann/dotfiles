@@ -1,7 +1,6 @@
 Managing my dotfiles via stow
 Install this repo and place it in ~/.dotfiles
 
-
 # Fresh install
 1. Install Homebrew
 ```
