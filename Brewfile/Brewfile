@@ -4,6 +4,7 @@ brew 'cowsay'
 brew 'zoxide'
 brew 'bat'
 brew 'eza'
+brew 'loop'
 
 
 cask 'hyperkey'

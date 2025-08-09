@@ -31,7 +31,12 @@ vim.pack.add({
 })
 
 require "mason".setup()
+
 require "mini.pick".setup()
+vim.keymap.set('n', '<leader><space>', '<cmd>Pick buffers<cr>', {desc = 'Search open files'})
+vim.keymap.set('n', '<leader>f', ":Pick files<CR>", {desc = 'Search all files'})
+vim.keymap.set('n', '<leader>h', ":Pick help<CR>", {desc = 'Search help tags'} )
+
 require("oil").setup({
 	default_file_explorer = true,
 	delete_to_trash = true,
@@ -46,8 +51,6 @@ require("oil").setup({
 })
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' }) 
 
-vim.keymap.set('n', '<leader>f', ":Pick files<CR>")
-vim.keymap.set('n', '<leader>h', ":Pick help<CR>")
 
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)

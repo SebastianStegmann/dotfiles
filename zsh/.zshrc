@@ -1,3 +1,5 @@
+PS1="%n@%m %~ $ "
+
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
