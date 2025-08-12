@@ -4,11 +4,10 @@ brew 'cowsay'
 brew 'zoxide'
 brew 'bat'
 brew 'eza'
-brew 'loop'
-
 
 cask 'hyperkey'
 cask 'ghostty'
+cask 'loop'
 # cask 'brave-browser'
 
 # Lua_ls

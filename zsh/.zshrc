@@ -1,4 +1,4 @@
-PS1="%n@%m %~ $ "
+PS1="%n@mb %~ $ "
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -12,7 +12,7 @@ accept-line() {
     fi
 }
 
-source ~/.profile
+# source ~/.profile
 
 zle -N accept-line
 bindkey '^M' accept-line
