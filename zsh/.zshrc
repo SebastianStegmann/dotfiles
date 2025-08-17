@@ -7,6 +7,9 @@ accept-line() {
     if [[ -z $BUFFER ]]; then
         BUFFER="nvim ."
         zle .accept-line
+    elif [[ $BUFFER == " " ]]; then
+        BUFFER="nvim ~/.dotfiles/nvim/.config/nvim/init.lua"
+        zle .accept-line
     else
         zle .accept-line
     fi
