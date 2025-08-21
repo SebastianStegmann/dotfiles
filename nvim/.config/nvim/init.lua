@@ -1,3 +1,8 @@
+-- Mark trailing whitespace
+vim.o.list = true
+vim.o.listchars = 'trail:•' -- tab:» ,lead:»,
+
+-- Basic config
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.termguicolors = true
@@ -11,6 +16,10 @@ vim.o.swapfile = false
 vim.o.winborder = "rounded"
 vim.o.undofile = true
 vim.o.ignorecase = true
+-- vim.o.guicursor = "i:block" -- Use block cursor in insert mode
+
+
+-- listchars=eol:↵,trail:~,tab:>-,nbsp:␣␣
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -53,13 +62,11 @@ require("oil").setup({
     show_hidden = true,
     natural_order = true,
     is_always_hidden = function(name, _)
-      return name == '..' or name == '.git'
+      return name == '..'  --  or name == '.git'
     end,
   },
 })
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
-
-
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
@@ -71,48 +78,3 @@ vim.lsp.enable({ "superhtml", "lua_ls", "tinymist" })
 require "vague".setup({ transparent = true })
 vim.cmd("colorscheme vague")
 vim.cmd(":hi statusline guibg=NONE")
-
---
---
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "html",
---   callback = function()
---     vim.keymap.set("i", "<leader>bp", "<!DOCTYPE html>", { buffer = true })
---   end,
--- })
--- -- autocmd filetype html inoremap .bp <!DOCTYPE html>
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "html",
---   callback = function()
---     vim.keymap.set("i", ".bp", "<!DOCTYPE html>", { buffer = true })
---   end,
--- })
---
---
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "html",
---   callback = function()
---     print("HTML FileType autocommand triggered")
---     vim.cmd("inoreabbrev <buffer> .bp <!DOCTYPE html>")
---   end,
--- })
--- vim.api.nvim_create_autocmd('TextYankPost', {
---   desc = 'Highlight when yanking text',
---   group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
---   callback = function()
---     vim.highlight.on_yank()
---   end,
--- })
-
--- vim.api.nvim_create_autocmd('LspAttach', {
---   callback = function(ev)
---     local client = vim.lsp.get_client_by_id(ev.data.client_id)
---     if client:supports_method('textDocument/completion') then
---       vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
---     end
---   end,
--- })
--- vim.cmd("set completeopt+=noselect")
---
--- vim.print(vim.pack.get())
--- vim.pack.del({"packagename"})

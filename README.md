@@ -21,4 +21,3 @@ stow */
 Either stow each folder with `stow nvim` etc
 or use the wildcard `*/` to place everything
 `stow . ` misplaces the folders
-
